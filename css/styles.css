@@ -292,6 +292,24 @@ body {
   color: rgba(31, 31, 31, 0.78)
 }
 
+.feature-popular {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.feature-price {
+  margin-bottom: 12px;
+  color: var(--color-text-dark);
+  font-weight: 700;
+}
+
 .service-details {
   align-self: flex-start;
   margin-top: auto;

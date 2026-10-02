@@ -502,8 +502,8 @@ function renderFeaturesMap() {
             <img src="${service.Image}" alt="${service.title}" class="feature-image" />
             <h3 class="feature-title">${service.title}</h3>
             <p class="feature-text">${service.text}</p>
-            <div class="feature-price service-price-pill">${service.price}</div>
             ${service.popular ? `<span class="feature-popular">Most Popular</span>` : ''}
+            <div class="feature-price">${service.price}</div>
             <button type="button" class="btn btn-secondary service-details" data-service-id="${service.id}">
                 Service details
             </button>
