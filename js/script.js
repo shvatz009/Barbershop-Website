@@ -22,7 +22,6 @@ const customerEmailInput = document.getElementById("customerEmail");
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const featureGrid = document.getElementById("featureGrid");
-const ctaBtn = document.getElementById("ctaPrimary");
 const ctaText = document.getElementById("ctaText");
 const callBtn = document.getElementById("ctaSecondary");
 const phoneNumber = document.getElementById("phoneNumber");
@@ -471,19 +470,12 @@ if (featureGrid) {
         if (featureScrollFrame === null) {
             featureScrollFrame = requestAnimationFrame(animateFeatureScroll);
         }
-    }, { passive: false });
-}
-// 5) CTA Button: "Book Now" (Placeholder behavior)
-if (ctaBtn) {
-    ctaBtn.addEventListener("click", () => {
-        updateHeadingText("Booking coming next - Great choice!")
-    });
-}
-// 6) Call Button
-callBtn?.addEventListener("click", openCallModal);
-// 7) Rounds Corners of the navbar on scroll (sticky nav)
+    }, { passive: false }); 
+};
+// 5) Call Button
+// 6) Rounds Corners of the navbar on scroll (sticky nav)
 window.addEventListener("scroll", handleHEaderOnScroll);
-// 8) Opens the modals for the cards when clicked
+// 7) Opens the modals for the cards when clicked
 if (featureGrid) {
     featureGrid.addEventListener("click", (event) => {
         const clickedButton = event.target.closest(".service-details.btn");

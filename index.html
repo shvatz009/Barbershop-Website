@@ -19,7 +19,7 @@
       </a>
       <nav class="nav" id="nav"></nav>
       <!-- Mobile Menu Button (for later JS)-->
-      <button class="menu-btn" id="menuBtn" aria-label="Open Menu">≡</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-haspopup="true" aria-label="Open Menu">≡</button>
     </div>
     <!-- Mobile Menu Panel (for later JS)-->
     <div class="mobile-menu" id="mobileMenu"></div>
@@ -64,9 +64,9 @@
         </p>
       </div>
       <div class="cta-text">
-                <button type="button" class="btn btn-secondary ctaBtn" id="ctaSecondary">
+        <a href="tel:+15551234567" class="btn btn-secondary ctaBtn" id="ctaSecondary" aria-label="Call the shop at (555) 123-4567">
           Call Us!
-        </button>
+        </a>
       </div>
     </div>
     <div class="container booking-layout">
@@ -150,6 +150,7 @@
       </button>
       <h2 id="callModalTitle">Call Us</h2>
       <p>Reach us at:</p>
+      <a href="tel:+15551234567" class="call-modal-link">+1 (555) 123-4567</a>
       <p class="service-modal-price call-modal-phone" id="callModalPhone"></p>
     </section>
   </div>
