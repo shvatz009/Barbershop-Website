@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="css/calendar.css" />
 </head>
 
-<body>
+<body id="top">
   <!-- =========== Header/Navbar=========-->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="assets/images/logo (1).png" class="logo" id="logo">Vintage Barbershop</a>
+      <a href="#top" class="brand" id="logo" aria-label="Go to top of page">
+        <img src="assets/images/logo (1).png" alt="Vintage Barbershop logo" class="brand-logo" />
+        <span class="brand-text">Vintage Barbershop</span>
+      </a>
       <nav class="nav" id="nav"></nav>
       <!-- Mobile Menu Button (for later JS)-->
       <button class="menu-btn" id="menuBtn" aria-label="Open Menu">≡</button>
@@ -36,7 +39,7 @@
         </div>
       </div>
       <div class="hero-media">
-        <img src="assets/images/hero.jpg" alt="Barbershop hero" class="hero-img" id="heroImg" />
+        <img src="assets/images/hero.jpg" alt="Vintage Barbershop interior with traditional chairs" class="hero-img" id="heroImg" />
       </div>
     </div>
   </section>
@@ -186,5 +189,4 @@
   <!-- JS -->
   <script src="js/script.js"></script>
 </body>
-
 </html>

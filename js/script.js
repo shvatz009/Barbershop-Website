@@ -62,7 +62,7 @@ const services = [
         title: "Classic Haircut",
         alt: "Classic Haircut",
         text: "Timeless cuts with modern precision tailored to your style",
-        Image: "assets/images/feature-1.jpg",
+        image: "assets/images/feature-1.jpg",
         price: "$25",
         popular: true,
         details: [
@@ -75,7 +75,7 @@ const services = [
         title: "Beard Trim",
         alt: "Beard Trim",
         text: "Expert beard shaping and maintenance for a polished look",
-        Image: "assets/images/feature-2.jpg",
+        image: "assets/images/feature-2.jpg",
         price: "$15",
         popular: false,
         details: [
@@ -88,7 +88,7 @@ const services = [
         title: "Straight Razor Shave",
         alt: "Straight Razor Shave",
         text: "Luxurious shaves with warm towels for a smooth finish",
-        Image: "assets/images/feature-3.jpg",
+        image: "assets/images/feature-3.jpg",
         price: "$30",
         popular: true,
         details: [
@@ -98,16 +98,16 @@ const services = [
     },
     {
         id: 4,
-        title: "Childrens Haircuts",
-        alt: "Childrens Haircuts",
+        title: "Children's Haircuts",
+        alt: "Children's Haircuts",
         text: "Specialized cuts for kids with a fun and comfortable experience.",
-        Image: "assets/images/feature-5.jpg",
+        image: "assets/images/feature-5.jpg",
         price: "$15",
         popular: false,
         details: [
             "Fun and engaging haircut experience for children",
             "Safe and gentle techniques for a comfortable visit",
-            "ASD friendly environment with trained staff to accommodate children with special needs"
+            "Autism-friendly environment with trained staff to accommodate children with special needs"
         ]
     },
     {
@@ -115,7 +115,7 @@ const services = [
         title: "Fade and Style",
         alt: "Fade and Style",
         text: "Modern fades and styles for a contemporary look",
-        Image: "assets/images/feature-4.jpg",
+        image: "assets/images/feature-4.jpg",
         price: "$25",
         popular: true,
         details: [
@@ -178,7 +178,7 @@ const renderTimeSlots = (date = null) => {
 
     const bookedTimes = bookingAvailability[getCalendarDateKey(date)] ?? [];
     let slotsMarkup = "";
-    for (let startTime = schedule.opensAt; startTime < schedule.closesAt; startTime += 30) {
+    for (let startTime = schedule.opensAt; startTime < schedule.closesAt; startTime += 60) {
         const time = formatClockTime(startTime);
         const isBooked = bookedTimes.includes(time);
         const classes = ["time-slot-btn", isBooked && "booked"].filter(Boolean).join(" ");
@@ -499,7 +499,7 @@ function renderFeaturesMap() {
     const cardsHTML = services.map((service) => {
         return `
         <article class="feature-card">
-            <img src="${service.Image}" alt="${service.title}" class="feature-image" />
+            <img src="${service.image}" alt="${service.title}" class="feature-image" />
             <h3 class="feature-title">${service.title}</h3>
             <p class="feature-text">${service.text}</p>
             ${service.popular ? `<span class="feature-popular">Most Popular</span>` : ''}
